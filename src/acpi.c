@@ -12,7 +12,7 @@
 #include "pci_regs.h" // PCI_INTERRUPT_LINE
 #include "ioport.h" // inl
 #include "paravirt.h"
-#include "acpi-tpm-ssdt.hex"
+#include "acpi-tpm-ssdt.aml"
 #include "tcgbios.h" // has_working_tpm
 
 /****************************************************/

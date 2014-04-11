@@ -224,7 +224,7 @@ $(OUT)vgabios.bin: $(OUT)vgabios.bin.raw tools/buildrom.py
 iasl-option=$(shell if test -z "`$(1) $(2) 2>&1 > /dev/null`" \
     ; then echo "$(2)"; else echo "$(3)"; fi ;)
 
-src/acpi-tpm-ssdt.hex: src/acpi-tpm-ssdt.dsl
+src/acpi-tpm-ssdt.aml: src/acpi-tpm-ssdt.dsl
 	@echo "Compiling TPM SSDT"
 	$(Q)cpp -P $< > $(OUT)$*.dsl.i
 	$(Q)iasl -tc -p $(OUT)$* $(OUT)$*.dsl.i
